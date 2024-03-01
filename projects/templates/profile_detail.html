@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+
+<body>
+    <h1>{{ profile.name }}</h1>
+    <h3>{{ profile.github }}</h3>
+    <h3>{{ profile.linkedin }}</h3>
+    <br>
+    <p>{{ profile.bio }}</p>
+    <br>
+    <h2>Projects</h2>
+    <ul>
+        {% for project in profile.projects.all %}
+        <li>{{ project.name }}</li>
+        <li>{{ project.description }}</li>
+        <a>{{ project.github_url }}</a>
+        <li>{{ project.keyword }}</li>
+        <li>{{ project.key_skill }}</li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
