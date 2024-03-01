@@ -24,6 +24,15 @@
         <li>{{ project.key_skill }}</li>
         {% endfor %}
     </ul>
+    <br>
+    <h2>Certificates</h2>
+    <ul>
+        {% for certificate in profile.certificates.all %}
+        <li>{{ certificate.name }}</li>
+        <li>{{ certificate.certifying_institution }}</li>
+        <li>{{ certificate.timestamp }}</li>
+        {% endfor %}
+    </ul>
 </body>
 
 </html>
