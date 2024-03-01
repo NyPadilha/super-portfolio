@@ -6,3 +6,9 @@ class ProfileSerializer(ModelSerializer):
     class Meta:
         model = Profile
         fields = "__all__"
+
+
+class ProjectSerializer(ModelSerializer):
+    class Meta:
+        model = Project
+        fields = "__all__"
